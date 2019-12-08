@@ -1,6 +1,6 @@
 # HackerNews Terminal Browser
 
-![Generic badge](https://img.shields.io/badge/Try%20it!-GitHub%20pages-blue.svg?style=flat&logo=appveyor)](https://sachaizadi.github.io/hackernews-terminal-browser/)
+[![Generic badge](https://img.shields.io/badge/Try%20it!-GitHub%20pages-blue.svg?style=flat&logo=appveyor)](https://sachaizadi.github.io/hackernews-terminal-browser/)
 
 This project offers a bash-like interface to read the latest news from [HackerNews](https://news.ycombinator.com/)
 
