@@ -29,13 +29,21 @@ class App extends Component {
         )
     }
 
-    render() {
-        this.getTopStoriesIds()
-        .then(storyIds => {
-            this.getStoryContent(storyIds[0])
-            .then(data => console.log(data))
-        })
+    getStoriesContent = () => {
+        return (
+            this.getTopStoriesIds()
+            .then(topStoriesIds => {
+                var promiseArray = []
+                for(var i = 0; i < Math.min(topStoriesIds.length,50); i++){
+                    promiseArray.push(this.getStoryContent(topStoriesIds[i]))
+                }
+                return Promise.all(promiseArray)
+            })
+        )
+    }
 
+
+    render() {
 
         return (
             <div
@@ -56,7 +64,8 @@ class App extends Component {
                 showmsg: this.showMsg,
                 popup: () => alert('Terminal in React'),
                 'a': () => {
-                    this.getTopStoriesIds().then(data=>console.log(data))
+                    this.getStoriesContent()
+                    .then(x => console.log(x))
                 }
             }}
             descriptions={{
