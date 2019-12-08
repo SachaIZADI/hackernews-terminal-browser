@@ -1,6 +1,6 @@
 {
   "name": "hackernews-terminal-browser",
-  "homepage": "http://SachaIZADI.github.io/hackernews-terminal-browser",
+  "homepage": "https://SachaIZADI.github.io/hackernews-terminal-browser",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
